@@ -1,0 +1,78 @@
+@import '~@angular/material/theming';
+@import '../../styles/styles.variables';
+@import '../../styles/styles.mixins';
+:host {
+  @include dimension(100%, 100%);
+  position: relative;
+  overflow-y: auto;
+  .flex-one {
+    @include truncate;
+  }
+  .flex-one:nth-child(2) {
+    text-align: center;
+  }
+  .section {
+    padding: $gutter-big;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .page-welcome {
+    margin: 0 auto;
+    padding: 10rem $gutter;
+    max-width: 960px;
+  }
+  .we-are {
+    margin-top: $gutter-big;
+  }
+  .page-competencies {
+    @include colorize($grey, 100);
+    border-top: 1px solid mat-color($grey, 300);
+    border-bottom: 1px solid mat-color($grey, 300);
+    .comp-container {
+      @include flex(row, center, space-between, nowrap, true);
+      @include dimension(100%, auto);
+      padding: $gutter;
+      .flex-one {
+        flex: 1;
+        img {
+          max-width: 150px;
+
+          &:hover {
+            transform: rotate(5deg);
+          }
+        }
+      }
+    }
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .no-bold {
+    font-weight: 100;
+  }
+  .form-item {
+    width: 100%;
+    md-input-container {
+      width: 100%;
+    }
+    /deep/ .mat-placeholder-required {
+      color: currentColor;
+    }
+    &.form-submit {
+      text-align: center;
+    }
+  }
+  .page-contact {
+    padding-bottom: $gutter-large;
+  }
+  .page-footer {
+    @include colorize($grey, 800);
+    @include flex;
+    color: mat-color($grey, 400);
+    padding: $gutter;
+    .flex-one:last-child {
+      text-align: right;
+    }
+  }
+}

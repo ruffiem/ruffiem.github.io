@@ -1,0 +1,83 @@
+<div id="activities" class="section page-welcome">
+  <h1 class="text-center uppercase">{{ 'WELCOME.CATCHPHRASE' | translate }}</h1>
+  <h3 class="we-are text-center no-bold">{{ 'WELCOME.WEARE' | translate }}</h3>
+</div>
+<div id="competencies" class="section page-competencies">
+  <h1 class="uppercase">{{ 'COMP.TOOLKIT' | translate }}</h1>
+  <div class="comp-container">
+    <div class="flex-one text-center">
+      <img src="./assets/resources/angular.svg">
+    </div>
+    <div class="flex-one text-center">
+      <img src="./assets/resources/sass.svg">
+    </div>
+    <div class="flex-one text-center">
+      <img src="./assets/resources/node.svg">
+    </div>
+  </div>
+</div>
+<!-- <div id="clients" style="height: 1000px;">
+  clients
+</div> -->
+<div id="contact" class="section page-contact">
+  <h1 class="uppercase">{{ 'CONTACT.LETSTALK' | translate }}</h1>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit" class="contact-form">
+    <div class="form-item">
+      <md-input-container>
+        <input 
+          mdInput 
+          formControlName="name" 
+          type="text" required
+          placeholder="{{'CONTACT.FORM.NAME' | translate}}">
+        <md-error *ngIf="contactForm.controls['name'].hasError('required')">
+          {{ 'CONTACT.FORM.ERROR.REQUIRED' | translate }}
+        </md-error>
+      </md-input-container>
+    </div>
+    <div class="form-item">
+      <md-input-container>
+        <input 
+          mdInput 
+          formControlName="email" 
+          type="email" required
+          placeholder="{{'CONTACT.FORM.EMAIL' | translate}}">
+        <md-error *ngIf="contactForm.controls['email'].hasError('required')">
+          {{ 'CONTACT.FORM.ERROR.REQUIRED' | translate }}
+        </md-error>
+        <md-error *ngIf="!contactForm.controls['email'].hasError('required') && contactForm.controls['email'].hasError('email')">
+          {{ 'CONTACT.FORM.ERROR.EMAIL' | translate }}
+        </md-error>
+      </md-input-container>
+    </div>
+    <div class="form-item">
+      <md-input-container>
+        <textarea 
+          mdInput mdTextareaAutosize mdAutosizeMinRows="5" mdAutosizeMaxRows="10"
+          formControlName="message" required
+          placeholder="{{'CONTACT.FORM.MESSAGE' | translate}}"></textarea>
+        <md-error *ngIf="contactForm.controls['message'].hasError('required')">
+          {{ 'CONTACT.FORM.ERROR.REQUIRED' | translate }}
+        </md-error>
+        <md-error *ngIf="contactForm.controls['message'].hasError('minlength')">
+          {{ 'CONTACT.FORM.ERROR.MINLENGTH' | translate: { value: minMessage } }} 
+        </md-error>
+        <md-error *ngIf="contactForm.controls['message'].hasError('maxlength')">
+          {{ 'CONTACT.FORM.ERROR.MAXLENGTH' | translate: { value: maxMessage } }}
+        </md-error>
+      </md-input-container>
+    </div>
+    <div class="form-item form-submit">
+      <button 
+        md-raised-button 
+        color="primary"
+        type="submit"
+        (click)="onSubmit">{{'CONTACT.FORM.SEND' | translate}}</button>
+    </div>
+  </form>
+</div>
+
+<div class="section page-footer">
+  <div class="flex-one">left</div>
+  <div class="flex-one">center</div>
+  <div class="flex-one">right</div>
+</div>

@@ -1,0 +1,35 @@
+{
+  "APP": {
+    "NAME": "Développement Web & Mobile Sur Mesure.",
+    "AUTHOR": "ruffiem",
+    "EMAIL": "ruffiem@gmail.com",
+    "URL": "http://ruffiem.github.io"
+  },
+  "US": {
+    "ACTIVITIES": "Activités",
+    "COMPETENCIES": "Compétences",
+    "CLIENTS": "Clientèle"
+  },
+  "WELCOME": {
+    "CATCHPHRASE": "Nous développons vos interfaces.",
+    "WEARE": "Nous sommes spécialisés dans le développement d'applications web et mobile."
+  },
+  "COMP": {
+    "TOOLKIT": "Un outillage sur mesure."
+  },
+  "CONTACT": {
+    "LETSTALK": "Discutons de votre projet !",
+    "FORM": {
+      "NAME": "Saisissez votre nom",
+      "EMAIL": "Saisissez votre adresse e-mail",
+      "MESSAGE": "Votre message",
+      "SEND": "Discutons !",
+      "ERROR": {
+        "REQUIRED": "Ce champ ne peut pas être vide.",
+        "EMAIL": "L'adresse saisie n'est pas valide.",
+        "MINLENGTH": "Votre message doit contenir au moins {{ value }} caractères.",
+        "MAXLENGTH": "Votre message est trop long (max. {{ value }} caractères)."
+      }
+    }
+  }
+}

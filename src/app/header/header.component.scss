@@ -1,0 +1,39 @@
+@import '../../styles/styles.variables';
+@import '../../styles/styles.mixins';
+
+:host {
+  @include dimension(100%, auto, $gutter);
+  @include colorize($indigo, 500);
+  @include flex;
+  flex-shrink: 0;
+
+  .flex-one {
+    @include truncate;
+  }
+
+  .flex-one:last-child {
+    text-align: right;
+  }
+
+  .tween {
+    transition: transform 300ms ease-in-out
+  }
+
+  .rotated {
+    transform: rotate(-270deg)
+  }
+
+  .inline-list {
+    @include flex(row, center, flex-start, nowrap, true);
+  }
+
+  a {
+    color: white;
+  }
+
+  a:hover, a:focus, a:active {
+    color: currentColor;
+    text-decoration: none;
+    outline: none;
+  }
+}

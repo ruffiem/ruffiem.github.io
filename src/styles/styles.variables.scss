@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+/* font */
+$font-path: './assets/fonts';
+$font-fam: Roboto, "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
+/* gutters */
+$gutter-tiny: .25rem;
+$gutter-small: .5rem;
+$gutter-medium: .75rem;
+$gutter: 1rem;
+$gutter-big: 2rem;
+$gutter-large: 3rem;
+/* colors */
+$indigo: mat-palette($mat-indigo);
+$grey: mat-palette($mat-grey);
