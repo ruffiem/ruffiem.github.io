@@ -8,12 +8,9 @@
   .flex-one {
     @include truncate;
   }
-  .flex-one:nth-child(2) {
-    text-align: center;
-  }
   .section {
     padding: $gutter-big;
-    &:not(.page-footer):nth-child(even) {
+    &:not(.page-footer):nth-child(odd) {
       @include colorize($grey, 100);
       border-top: 1px solid mat-color($grey, 300);
       border-bottom: 1px solid mat-color($grey, 300);
@@ -24,43 +21,48 @@
   }
   .page-welcome {
     margin: 0 auto;
-    padding: 10rem $gutter;
-    max-width: 960px;
-    // background-image: url('/assets/resources/desk.jpg');
+    padding: 10rem $gutter; 
+    // background-image: url('/assets/resources/desk.png');
     // background-size: cover;
   }
   .we-are {
     margin-top: $gutter-big;
   }
-  .page-competencies {
+  .page-services, .page-competencies {
     padding-bottom: 0;
-    .comp-container {
-      @include flex(row, flex-start, space-between, wrap, true);
-      @include dimension(100%, auto);
-      padding: $gutter;
-      .flex-one {
-        flex: 1;
-        flex-basis: 33%;
-        max-width: 33%;
-        padding: 0 $gutter-big;
-        margin-bottom: $gutter-big;
-        img {
-          height: 150px;
-          transform: scale(.9);
-          transition: transform 100ms ease-in;
-
-          &:hover {
-            transform: scale(1);
-          }
-        }
-
-        p {
-          white-space: initial;
-          text-align: left;
-          margin-top: $gutter-big;
+  }
+  .service-icon {
+    @include dimension(auto, auto);
+    font-size: 5rem;
+  }
+  .flex-container {
+    @include flex(row, flex-start, space-between, wrap, true);
+    @include dimension(100%, auto);
+    padding: $gutter;
+    .flex-one {
+      flex: 1;
+      // flex-basis: 33%;
+      // max-width: 33%;
+      // padding: 0 $gutter-big;
+      margin-bottom: $gutter-big;
+      img {
+        height: 150px;
+        transform: scale(.9);
+        transition: transform 100ms ease-in;
+        &:hover {
+          transform: scale(1);
         }
       }
+      p {
+        white-space: initial;
+        text-align: left;
+        margin-top: $gutter-big;
+      }
     }
+  }
+  .page-services .flex-one {
+    flex-basis: 25%;
+    max-width: 25%;
   }
   .uppercase {
     text-transform: uppercase;
@@ -96,13 +98,11 @@
       @include flex(row, center, flex-end);
     }
   }
-
   a {
     color: currentColor;
   }
-
   .logo-small {
-    font-size: 1rem;
-    margin-left: $gutter-small;
+    font-size: 1.5rem;
+    margin-right: $gutter-small;
   }
 }

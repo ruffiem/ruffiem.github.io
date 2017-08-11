@@ -1,21 +1,30 @@
 {
   "APP": {
-    "NAME": "Développement Web & Mobile Sur Mesure. FrontFlow.",
-    "AUTHOR": "ruffiem",
-    "EMAIL": "ruffiem@gmail.com",
-    "URL": "http://frontflow.ch"
+    "TITLE": "Développement Web & Mobile Sur Mesure. FrontFlow."
   },
-  "US": {
-    "ACTIVITIES": "Nos Activités",
-    "COMPETENCIES": "L'Outillage",
-    "CLIENTS": "Clientèle"
+  "HEADER": {
+    "LINK": {
+      "SERVICES": "Notre Expertise",
+      "TOOLKIT": "Nos Outils"
+    }
   },
   "WELCOME": {
     "CATCHPHRASE": "Nous développons vos interfaces.",
     "WEARE": "Nous sommes spécialisés dans le développement d'applications web et mobile."
   },
-  "COMP": {
-    "TOOLKIT": "Un outillage sur mesure."
+  "SERVICES": {
+    "TITLE": "Notre expertise à votre service.",
+    "CODE": "Avec plus de <b>15 ans d'expérience</b> en développement web, notre routine est sûre et nos choix toujours adaptés à vos besoins.",
+    "UX": "Nos <strong>interfaces</strong> ont pour but d'être intuitives et simples afin de garantir une expérience utilisateur de qualité.",
+    "DEVICE": "Tous nos développements sont <b>naturellement adaptés</b> à tous les écrans (responsive design).",
+    "WORK": "La communication est essentielle, c'est pourquoi vous pouvez <b>suivre la progression</b> de votre projet sur votre espace personnel."
+  },
+  "TOOLKIT": {
+    "TITLE": "Un outillage sur mesure.",
+    "ANGULAR": "<strong>Angular</strong> est un framework fiable et robuste pour la création d'applications web et mobile performantes reposant sur une structure claire et maintenable.",
+    "SASS": "Avec <strong>SASS</strong> pour la création des feuilles de style de votre application, la productivité et leur modification sont nettement améliorées.",
+    "TYPESCRIPT": "<strong>TypeScript</strong> nous permet de produire du <strong>JavaScript</strong> propre et durable. Moins de duplication, plus de code !",
+    "CORDOVA": "<strong>Cordova</strong> est une technologie qui nous permet de créer une seule application multi-support (Android, iOS, Windows Phone)."
   },
   "CONTACT": {
     "LETSTALK": "Discutons de votre projet !",

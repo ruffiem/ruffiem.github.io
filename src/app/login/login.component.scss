@@ -7,11 +7,14 @@
   .ticket {
     @include dimension(100%, auto, $gutter-big $gutter, $gutter);
     @include flex(column, center, center);
+    box-shadow: 0px 0px $gutter-large mat-color($grey, 300);
     background: white;
     max-width: 500px;
+    margin: 0 $gutter;
   }
   .big-title {
     font-size: 4rem;
+    color: mat-color($indigo, 500);
   }
   .small-title {
     margin: $gutter;

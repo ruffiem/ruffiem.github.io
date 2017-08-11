@@ -1,45 +1,52 @@
-<div id="activities" class="section page-welcome">
-  <h1 class="text-center uppercase">{{ 'WELCOME.CATCHPHRASE' | translate }}</h1>
-  <h3 class="we-are text-center no-bold">{{ 'WELCOME.WEARE' | translate }}</h3>
+<div id="welcome" class="section page-welcome">
+  <h1 class="text-center uppercase">{{'WELCOME.CATCHPHRASE'|translate}}</h1>
+  <h3 class="we-are text-center no-bold">{{'WELCOME.WEARE'|translate}}</h3>
 </div>
-<div id="competencies" class="section page-competencies">
-  <h1 class="uppercase">{{ 'COMP.TOOLKIT' | translate }}</h1>
-  <div class="comp-container">
+<div id="services" class="section page-services">
+  <h1 class="uppercase">{{'SERVICES.TITLE'|translate}}</h1>
+  <div class="flex-container">
     <div class="flex-one text-center">
-      <img src="./assets/resources/angular.svg">
-      <p>
-        <strong>Angular</strong> est un framework fiable et robuste pour la création d'applications 
-        web et mobile performantes reposant sur une structure claire et maintenable.
-      </p>
+      <md-icon class="service-icon">code</md-icon>
+      <p [innerHTML]="'SERVICES.CODE'|translate"></p>
     </div>
     <div class="flex-one text-center">
-      <img src="./assets/resources/sass.svg">
-      <p>
-        Avec <strong>SASS</strong> pour la création des feuilles de style de votre application, la 
-        productivité et leur modification sont nettement améliorées.
-      </p>
+      <md-icon class="service-icon">color_lens</md-icon>
+      <p [innerHTML]="'SERVICES.UX'|translate"></p>
     </div>
     <div class="flex-one text-center">
-      <img src="./assets/resources/node.svg">
-      <p>
-        <strong>TypeScript</strong> nous permet de produire du <strong>JavaScript</strong> propre
-        et durable. Moins de duplication, plus de code !
-      </p>
+      <md-icon class="service-icon">important_devices</md-icon>
+      <p [innerHTML]="'SERVICES.DEVICE'|translate"></p>
     </div>
     <div class="flex-one text-center">
-      <img src="./assets/resources/cordova.svg">
-      <p>
-        <strong>Cordova</strong> est une technologie qui nous permet de créer une seule application
-        multi-support (Android, iOS, Windows Phone).
-      </p>
+      <md-icon class="service-icon">local_cafe</md-icon>
+      <p [innerHTML]="'SERVICES.WORK'|translate"></p>
     </div>
   </div>
 </div>
-<!-- <div id="clients" style="height: 1000px;">
-  clients
-</div> -->
+<div id="toolkit" class="section page-competencies">
+  <h1 class="uppercase">{{'TOOLKIT.TITLE'|translate}}</h1>
+  <div class="flex-container">
+    <div class="flex-one text-center">
+      <img src="./assets/resources/angular.svg">
+      <p [innerHTML]="'TOOLKIT.ANGULAR'|translate"></p>
+    </div>
+    <div class="flex-one text-center">
+      <img src="./assets/resources/sass.svg">
+      <p [innerHTML]="'TOOLKIT.SASS'|translate"></p>
+    </div>
+    <div class="flex-one text-center">
+      <img src="./assets/resources/typescript.svg">
+      <p [innerHTML]="'TOOLKIT.TYPESCRIPT'|translate"></p>
+    </div>
+    <div class="flex-one text-center">
+      <img src="./assets/resources/cordova.svg">
+      <p [innerHTML]="'TOOLKIT.CORDOVA'|translate"></p>
+    </div>
+  </div>
+</div>
+
 <div id="contact" class="section page-contact">
-  <h1 class="uppercase">{{ 'CONTACT.LETSTALK' | translate }}</h1>
+  <h1 class="uppercase">{{'CONTACT.LETSTALK'|translate}}</h1>
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit" class="contact-form">
     <div class="form-item">
       <md-input-container>
@@ -58,7 +65,7 @@
           type="email" required
           placeholder="{{'CONTACT.FORM.EMAIL' | translate}}">
         <md-error *ngIf="!contactForm.controls['email'].hasError('required') && contactForm.controls['email'].hasError('email')">
-          {{ 'CONTACT.FORM.ERROR.EMAIL' | translate }}
+          {{'CONTACT.FORM.ERROR.EMAIL'|translate}}
         </md-error>
       </md-input-container>
     </div>
@@ -81,19 +88,21 @@
         md-raised-button 
         color="primary"
         type="submit"
-        (click)="onSubmit">{{'CONTACT.FORM.SEND' | translate}}</button>
+        (click)="onSubmit">{{'CONTACT.FORM.SEND'|translate}}</button>
     </div>
   </form>
 </div>
 
 <div class="section page-footer">
   <div class="flex-one">
-    <a scrollTo href="#activities">
+    <a scrollTo href="#welcome">
       <md-icon>keyboard_arrow_up</md-icon>
     </a>
   </div>
   <div class="flex-one"></div>
   <div class="flex-one">
-    &copy; {{ year }} <i class="icon-frontflow logo-small"></i>
+    <a href="/">
+      <i class="icon-frontflow logo-small"></i>
+    </a> &copy; {{ year }}
   </div>
 </div>
