@@ -13,6 +13,11 @@
   }
   .section {
     padding: $gutter-big;
+    &:not(.page-footer):nth-child(even) {
+      @include colorize($grey, 100);
+      border-top: 1px solid mat-color($grey, 300);
+      border-bottom: 1px solid mat-color($grey, 300);
+    }
   }
   .text-center {
     text-align: center;
@@ -21,26 +26,38 @@
     margin: 0 auto;
     padding: 10rem $gutter;
     max-width: 960px;
+    // background-image: url('/assets/resources/desk.jpg');
+    // background-size: cover;
   }
   .we-are {
     margin-top: $gutter-big;
   }
   .page-competencies {
-    @include colorize($grey, 100);
-    border-top: 1px solid mat-color($grey, 300);
-    border-bottom: 1px solid mat-color($grey, 300);
+    padding-bottom: 0;
     .comp-container {
-      @include flex(row, center, space-between, nowrap, true);
+      @include flex(row, flex-start, space-between, wrap, true);
       @include dimension(100%, auto);
       padding: $gutter;
       .flex-one {
         flex: 1;
+        flex-basis: 33%;
+        max-width: 33%;
+        padding: 0 $gutter-big;
+        margin-bottom: $gutter-big;
         img {
-          max-width: 150px;
+          height: 150px;
+          transform: scale(.9);
+          transition: transform 100ms ease-in;
 
           &:hover {
-            transform: rotate(5deg);
+            transform: scale(1);
           }
+        }
+
+        p {
+          white-space: initial;
+          text-align: left;
+          margin-top: $gutter-big;
         }
       }
     }
@@ -69,10 +86,23 @@
   .page-footer {
     @include colorize($grey, 800);
     @include flex;
+    font-size: .8rem;
     color: mat-color($grey, 400);
     padding: $gutter;
-    .flex-one:last-child {
-      text-align: right;
+    .flex-one:first-child {
+      @include flex(row, center, flex-start);
     }
+    .flex-one:last-child {
+      @include flex(row, center, flex-end);
+    }
+  }
+
+  a {
+    color: currentColor;
+  }
+
+  .logo-small {
+    font-size: 1rem;
+    margin-left: $gutter-small;
   }
 }

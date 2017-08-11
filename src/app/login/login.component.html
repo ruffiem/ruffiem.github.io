@@ -1,0 +1,19 @@
+<div class="floating-back">
+  <a routerLink="/" md-button>
+    <md-icon>arrow_back</md-icon>
+    <span>{{'BACK' | translate}}</span>
+  </a>
+</div>
+<div class="ticket">
+  <i class="icon-frontflow big-title"></i>
+  <p class="small-title">{{'LOGIN.CUSTOMER' | translate }}</p>
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <md-input-container>
+      <input mdInput required formControlName="id" type="text" placeholder="{{'LOGIN.USER' | translate}}" value="value">
+    </md-input-container>
+    <md-input-container>
+      <input mdInput required formControlName="pass" type="password" placeholder="{{'LOGIN.PASS' | translate}}" value="value">
+    </md-input-container>
+    <button md-raised-button color="primary">{{'LOGIN.SUBMIT' | translate}}</button>
+  </form>
+</div>

@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ScrollToModule } from 'ng2-scroll-to';
@@ -6,7 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   imports: [
     SharedModule,
-    BrowserModule,
+    BrowserAnimationsModule,
     ScrollToModule.forRoot()
   ],
   exports: [],

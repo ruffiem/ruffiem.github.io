@@ -12,10 +12,12 @@ export class ContentComponent implements OnInit {
   contactForm: FormGroup;
   maxMessage: number;
   minMessage: number;
+  year: number;
 
   constructor(private fb: FormBuilder) {
     this.minMessage = 20;
     this.maxMessage = 200;
+    this.year = new Date().getFullYear();
   }
 
   ngOnInit() {

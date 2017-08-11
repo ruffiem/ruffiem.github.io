@@ -1,13 +1,13 @@
 {
   "APP": {
-    "NAME": "Développement Web & Mobile Sur Mesure.",
+    "NAME": "Développement Web & Mobile Sur Mesure. FrontFlow.",
     "AUTHOR": "ruffiem",
     "EMAIL": "ruffiem@gmail.com",
-    "URL": "http://ruffiem.github.io"
+    "URL": "http://frontflow.ch"
   },
   "US": {
-    "ACTIVITIES": "Activités",
-    "COMPETENCIES": "Compétences",
+    "ACTIVITIES": "Nos Activités",
+    "COMPETENCIES": "L'Outillage",
     "CLIENTS": "Clientèle"
   },
   "WELCOME": {
@@ -31,5 +31,15 @@
         "MAXLENGTH": "Votre message est trop long (max. {{ value }} caractères)."
       }
     }
-  }
+  },
+  "FOOTER": {
+    "WEBUILD": ""
+  },
+  "LOGIN": {
+    "CUSTOMER": "Espace client",
+    "USER": "Utilisateur (nom ou e-mail)",
+    "PASS": "Mot de passe",
+    "SUBMIT": "Connexion"
+  },
+  "BACK": "Retour au site"
 }

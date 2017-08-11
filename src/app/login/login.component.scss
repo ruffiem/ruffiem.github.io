@@ -1,0 +1,37 @@
+@import '../../styles/styles.variables';
+@import '../../styles/styles.mixins';
+:host {
+  @include dimension;
+  @include flex(column, center, center);
+  @include colorize($grey, 100);
+  .ticket {
+    @include dimension(100%, auto, $gutter-big $gutter, $gutter);
+    @include flex(column, center, center);
+    background: white;
+    max-width: 500px;
+  }
+  .big-title {
+    font-size: 4rem;
+  }
+  .small-title {
+    margin: $gutter;
+    color: mat-color($grey, 700);
+  }
+  .floating-back {
+    padding: $gutter;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  form {
+    @include flex(column);
+    width: 100%;
+    padding: $gutter;
+    md-input-container, button {
+      width: 100%;
+    }
+    /deep/ .mat-placeholder-required {
+      color: currentColor !important;
+    }
+  }
+}

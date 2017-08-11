@@ -1,13 +1,16 @@
 <div class="flex-one inline-list">
+  <a href="{{ 'APP.URL' | translate }}">
+    <i class="icon-frontflow logo-full"></i>
+  </a>
   <a href="#activities" scrollTo md-button>{{ 'US.ACTIVITIES' | translate }}</a>
   <a href="#competencies" scrollTo md-button>{{ 'US.COMPETENCIES' | translate }}</a>
-  <!-- <a href="#clients" scrollTo md-button>{{ 'US.CLIENTS' | translate }}</a> -->
 </div>
 <div class="flex-one">
   <a href="#contact" scrollTo md-icon-button>
     <md-icon>mail_outline</md-icon>
   </a>
-  <a href="#login" md-icon-button>
+  <a routerLink="/login" md-icon-button>
     <md-icon>person</md-icon>
   </a>
 </div>
+

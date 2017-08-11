@@ -1,4 +1,3 @@
-import { MenuService } from '../shared/service/menu.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
-  constructor(public menu: MenuService) { }
+  constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 }
