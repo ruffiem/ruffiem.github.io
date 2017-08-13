@@ -9,7 +9,7 @@ export class MailService {
 
   constructor(private http: Http) { }
 
-  send(mail: MailFormat) {
-    return this.http.post(API_ENDPOINT, mail);
+  send(data: MailFormat) {
+    return this.http.post(API_ENDPOINT, data);
   }
 }

@@ -1,6 +1,8 @@
 {
   "APP": {
-    "TITLE": "Développement Web & Mobile Sur Mesure. FrontFlow."
+    "TITLE": "Développement Web & Mobile Sur Mesure. FrontFlow.",
+    "DESCRIPTION": "FrontFlow est spécialisé dans le développement d'applications web et mobile.",
+    "KEYWORDS": "creation de site, site web geneve, developpement web, interface utilisateur, experience utilisateur, ux geneve, agence web geneve, site web geneve, developpeur angular, site angular, developpement mobile cordova, developpeur cordova, developpement application web geneve"
   },
   "HEADER": {
     "LINK": {
@@ -15,10 +17,10 @@
   "SERVICES": {
     "TITLE": "Notre expertise à votre service.",
     "CODE": "Avec plus de <b>15 ans d'expérience</b> en développement web, nos méthodes de travail sont sûres et nos choix toujours adaptés à vos besoins.",
-    "UX": "Bien plus qu'une interface, <b>FrontFlow</b> crée des interfaces simples et intuitives afin de garantir une <strong>expérience utilisateur</strong> de qualité.",
-    "BACKEND": "Quelque soit votre <strong>technologie back-end</strong> (PHP, Java, autre), nous définirons ensemble le meilleur moyen d'accéder à vos données.",
+    "UX": "Bien plus que des interfaces, <b>FrontFlow</b> crée des <strong>expériences utilisateurs</strong> de qualité afin de fidéliser vos visiteurs.",
+    "BACKEND": "Quelque soit votre <strong>technologie back-end</strong> (PHP, Java, autres), nous définirons ensemble le meilleur moyen d'accéder à vos données.",
     "TESTING": "Nous validons nos itérations par le biais de <strong>tests unitaires</strong>. Chaque module est donc évalué plusieurs fois avant sa mise en production.",
-    "DEVICE": "Tous nos développements sont <b>naturellement adaptés</b> à tous les écrans (responsive design).",
+    "DEVICE": "Tous nos développements sont <b>naturellement adaptés</b> à tous les écrans: ordinateurs de bureau, tablettes et téléphones mobiles.",
     "WORK": "La communication est essentielle, c'est pourquoi vous pouvez <b>suivre la progression</b> de votre projet sur votre <a href='login' class='link'>espace personnel</a>."
   },
   "TOOLKIT": {
@@ -49,7 +51,7 @@
     "WEBUILD": ""
   },
   "LOGIN": {
-    "CUSTOMER": "Espace client",
+    "CUSTOMER": "Espace client. FrontFlow.",
     "USER": "Utilisateur (nom ou e-mail)",
     "PASS": "Mot de passe",
     "SUBMIT": "Connexion"

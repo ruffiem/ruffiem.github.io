@@ -2,6 +2,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Title } from '@angular/platform-browser';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { MetaService } from '@ngx-meta/core';
 
 @Component({
   templateUrl: 'login.component.html',
@@ -12,11 +13,18 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private title: Title, private translate: TranslateService) {
+  constructor(private fb: FormBuilder,
+              translate: TranslateService,
+              meta: MetaService) {
+    translate.get('LOGIN.CUSTOMER').subscribe(name => {
+      meta.setTitle(name);
+      meta.setTag('twitter:title', name);
+    });
+    meta.setTag('description', '');
+    meta.setTag('twitter:description', '');
   }
 
   ngOnInit() {
-    this.title.setTitle(this.translate.instant('LOGIN.CUSTOMER'));
     this.loginForm = this.fb.group({
       user: ['', Validators.required],
       pass: ['', Validators.required]

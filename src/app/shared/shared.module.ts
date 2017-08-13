@@ -1,6 +1,5 @@
 import { Http, HttpModule } from '@angular/http';
 import { MailService } from './services/mail.service';
-import { ScenarioComponent } from './components/scenario/scenario.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -32,10 +31,8 @@ import { TranslateModule } from '@ngx-translate/core';
     RouterModule,
     TranslateModule,
     FormsModule,
-    ReactiveFormsModule,
-    ScenarioComponent
+    ReactiveFormsModule
   ],
-  declarations: [ScenarioComponent],
   providers: [MailService]
 })
 export class SharedModule { }

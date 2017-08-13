@@ -3,12 +3,14 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ScrollToModule } from 'ng2-scroll-to';
 import { SharedModule } from '../shared/shared.module';
+import { MetaModule } from '@ngx-meta/core';
 
 @NgModule({
   imports: [
     SharedModule,
     BrowserAnimationsModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    MetaModule.forRoot()
   ],
   exports: [],
   declarations: [],
