@@ -1,4 +1,3 @@
-@import '~@angular/material/theming';
 @import '../../styles/styles.variables';
 @import '../../styles/styles.mixins';
 :host {
@@ -15,15 +14,25 @@
       border-top: 1px solid mat-color($grey, 300);
       border-bottom: 1px solid mat-color($grey, 300);
     }
+    // &.page-welcome{
+    //   background-color: transparent !important;
+    //   border-top: 0px !important;
+    // }
   }
   .text-center {
     text-align: center;
   }
   .page-welcome {
     margin: 0 auto;
-    padding: 10rem $gutter; 
-    // background-image: url('/assets/resources/desk.png');
-    // background-size: cover;
+    padding: 10rem $gutter;
+    position: relative;
+  }
+  .scenario {
+    @include dimension;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
   }
   .we-are {
     margin-top: $gutter-big;
@@ -41,9 +50,6 @@
     padding: $gutter;
     .flex-one {
       flex: 1;
-      // flex-basis: 33%;
-      // max-width: 33%;
-      // padding: 0 $gutter-big;
       margin-bottom: $gutter-big;
       img {
         height: 150px;
@@ -79,11 +85,27 @@
       color: currentColor;
     }
     &.form-submit {
-      text-align: center;
+      @include flex(row, center, center, nowrap, true);
+
+      /deep/ .mat-spinner {
+        @include dimension(25px, 25px);
+        margin-left: $gutter;
+        path {
+          stroke: mat-color($indigo, 500);
+        }
+      }
     }
   }
   .page-contact {
     padding-bottom: $gutter-large;
+  }
+  .ribbon-success {
+    background-color: mat-color($green, 50);
+    border: 1px solid mat-color($green, 200);
+    color: mat-color($green, 700);
+    border-radius: 1px;
+    padding: $gutter-small;
+    margin-bottom: $gutter;
   }
   .page-footer {
     @include colorize($grey, 800);
@@ -97,9 +119,10 @@
     .flex-one:last-child {
       @include flex(row, center, flex-end);
     }
-  }
-  a {
-    color: currentColor;
+    a {
+      line-height: 1;
+      color: currentColor;
+    }
   }
   .logo-small {
     font-size: 1.5rem;

@@ -1,14 +1,15 @@
-$icon-swiss: "\e902";
+$icon-server: "\e904";
 $icon-ff: "\e900";
-$icon-frontflow: "\e901";
+$icon-frontflow: "\e902";
+$icon-swiss: "\e903";
 
 @font-face {
   font-family: 'frontflow';
-  src:  url('#{$font-path}/frontflow/frontflow.eot?vy3vvn');
-  src:  url('#{$font-path}/frontflow/frontflow.eot?vy3vvn#iefix') format('embedded-opentype'),
-    url('#{$font-path}/frontflow/frontflow.ttf?vy3vvn') format('truetype'),
-    url('#{$font-path}/frontflow/frontflow.woff?vy3vvn') format('woff'),
-    url('#{$font-path}/frontflow/frontflow.svg?vy3vvn#frontflow') format('svg');
+  src:  url('#{$font-path}/frontflow/frontflow.eot?1tk1ed');
+  src:  url('#{$font-path}/frontflow/frontflow.eot?1tk1ed#iefix') format('embedded-opentype'),
+    url('#{$font-path}/frontflow/frontflow.ttf?1tk1ed') format('truetype'),
+    url('#{$font-path}/frontflow/frontflow.woff?1tk1ed') format('woff'),
+    url('#{$font-path}/frontflow/frontflow.svg?1tk1ed#frontflow') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -28,9 +29,9 @@ $icon-frontflow: "\e901";
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-swiss {
+.icon-server {
   &:before {
-    content: $icon-swiss;
+    content: $icon-server;
   }
 }
 .icon-ff {
@@ -43,3 +44,9 @@ $icon-frontflow: "\e901";
     content: $icon-frontflow;
   }
 }
+.icon-swiss {
+  &:before {
+    content: $icon-swiss;
+  }
+}
+

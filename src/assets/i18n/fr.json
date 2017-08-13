@@ -10,24 +10,28 @@
   },
   "WELCOME": {
     "CATCHPHRASE": "Nous développons vos interfaces.",
-    "WEARE": "Nous sommes spécialisés dans le développement d'applications web et mobile."
+    "WEARE": "FrontFlow est spécialisé dans le développement d'applications web et mobile."
   },
   "SERVICES": {
     "TITLE": "Notre expertise à votre service.",
-    "CODE": "Avec plus de <b>15 ans d'expérience</b> en développement web, notre routine est sûre et nos choix toujours adaptés à vos besoins.",
-    "UX": "Nos <strong>interfaces</strong> ont pour but d'être intuitives et simples afin de garantir une expérience utilisateur de qualité.",
+    "CODE": "Avec plus de <b>15 ans d'expérience</b> en développement web, nos méthodes de travail sont sûres et nos choix toujours adaptés à vos besoins.",
+    "UX": "Bien plus qu'une interface, <b>FrontFlow</b> crée des interfaces simples et intuitives afin de garantir une <strong>expérience utilisateur</strong> de qualité.",
+    "BACKEND": "Quelque soit votre <strong>technologie back-end</strong> (PHP, Java, autre), nous définirons ensemble le meilleur moyen d'accéder à vos données.",
+    "TESTING": "Nous validons nos itérations par le biais de <strong>tests unitaires</strong>. Chaque module est donc évalué plusieurs fois avant sa mise en production.",
     "DEVICE": "Tous nos développements sont <b>naturellement adaptés</b> à tous les écrans (responsive design).",
-    "WORK": "La communication est essentielle, c'est pourquoi vous pouvez <b>suivre la progression</b> de votre projet sur votre espace personnel."
+    "WORK": "La communication est essentielle, c'est pourquoi vous pouvez <b>suivre la progression</b> de votre projet sur votre <a href='login' class='link'>espace personnel</a>."
   },
   "TOOLKIT": {
     "TITLE": "Un outillage sur mesure.",
     "ANGULAR": "<strong>Angular</strong> est un framework fiable et robuste pour la création d'applications web et mobile performantes reposant sur une structure claire et maintenable.",
     "SASS": "Avec <strong>SASS</strong> pour la création des feuilles de style de votre application, la productivité et leur modification sont nettement améliorées.",
     "TYPESCRIPT": "<strong>TypeScript</strong> nous permet de produire du <strong>JavaScript</strong> propre et durable. Moins de duplication, plus de code !",
-    "CORDOVA": "<strong>Cordova</strong> est une technologie qui nous permet de créer une seule application multi-support (Android, iOS, Windows Phone)."
+    "CORDOVA": "Nous utilisons <strong>Cordova</strong> afin de déposer votre application sur les différents stores (Google Play, AppStore & Windows Store).",
+    "OTHER": "FrontFlow est une <b>agence 360°</b>. Nous maitrisons aussi bien d'autres technologies dans les domaines du <strong>back-end</strong> et de l'<strong>intégration continue</strong>."
   },
   "CONTACT": {
     "LETSTALK": "Discutons de votre projet !",
+    "SUCCESS": "Merci pour votre message, nous vous répondrons dans les plus brefs délais.",
     "FORM": {
       "NAME": "Saisissez votre nom",
       "EMAIL": "Saisissez votre adresse e-mail",

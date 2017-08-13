@@ -1,8 +1,11 @@
+import { Http, HttpModule } from '@angular/http';
+import { MailService } from './services/mail.service';
+import { ScenarioComponent } from './components/scenario/scenario.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MdIconModule, MdButtonModule, MdRippleModule, MdInputModule } from '@angular/material';
+import { MdIconModule, MdButtonModule, MdRippleModule, MdInputModule, MdProgressSpinnerModule } from '@angular/material';
 import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
@@ -11,8 +14,10 @@ import { TranslateModule } from '@ngx-translate/core';
     MdIconModule,
     MdRippleModule,
     MdInputModule,
+    MdProgressSpinnerModule,
     CommonModule,
     RouterModule,
+    HttpModule,
     TranslateModule,
     FormsModule,
     ReactiveFormsModule
@@ -22,11 +27,15 @@ import { TranslateModule } from '@ngx-translate/core';
     MdIconModule,
     MdRippleModule,
     MdInputModule,
+    MdProgressSpinnerModule,
     CommonModule,
     RouterModule,
     TranslateModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    ScenarioComponent
+  ],
+  declarations: [ScenarioComponent],
+  providers: [MailService]
 })
 export class SharedModule { }

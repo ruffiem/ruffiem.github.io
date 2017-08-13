@@ -1,0 +1,15 @@
+@import '../../../../styles/styles.variables';
+@import '../../../../styles/styles.mixins';
+:host {
+  @include dimension(100%, 100%);
+  @include position(0, 0);
+  @include colorize($grey, 100);
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+
+  .movable-object {
+    position: absolute;
+    top: 0;
+  }
+}

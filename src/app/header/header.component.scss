@@ -34,5 +34,8 @@
 
   a {
     color: white;
+    &:not(.mat-icon-button):not(.mat-button) {
+      line-height: 1;
+    }
   }
 }

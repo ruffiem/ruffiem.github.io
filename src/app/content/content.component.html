@@ -1,7 +1,11 @@
+<!-- WELCOME -->
 <div id="welcome" class="section page-welcome">
+  <!-- <app-scenario [scrollEvent]="scrollEvent"></app-scenario> -->
   <h1 class="text-center uppercase">{{'WELCOME.CATCHPHRASE'|translate}}</h1>
   <h3 class="we-are text-center no-bold">{{'WELCOME.WEARE'|translate}}</h3>
 </div>
+
+<!-- SERVICES -->
 <div id="services" class="section page-services">
   <h1 class="uppercase">{{'SERVICES.TITLE'|translate}}</h1>
   <div class="flex-container">
@@ -18,11 +22,21 @@
       <p [innerHTML]="'SERVICES.DEVICE'|translate"></p>
     </div>
     <div class="flex-one text-center">
+      <md-icon fontSet="frontflow" fontIcon="icon-server" class="service-icon"></md-icon>
+      <p [innerHTML]="'SERVICES.BACKEND'|translate"></p>
+    </div>
+    <div class="flex-one text-center">
+      <md-icon class="service-icon">bug_report</md-icon>
+      <p [innerHTML]="'SERVICES.TESTING'|translate"></p>
+    </div>
+    <div class="flex-one text-center">
       <md-icon class="service-icon">local_cafe</md-icon>
       <p [innerHTML]="'SERVICES.WORK'|translate"></p>
     </div>
   </div>
 </div>
+
+<!-- TOOLKIT -->
 <div id="toolkit" class="section page-competencies">
   <h1 class="uppercase">{{'TOOLKIT.TITLE'|translate}}</h1>
   <div class="flex-container">
@@ -42,12 +56,21 @@
       <img src="./assets/resources/cordova.svg">
       <p [innerHTML]="'TOOLKIT.CORDOVA'|translate"></p>
     </div>
+    <div class="flex-one text-center">
+      <img src="./assets/resources/other.svg">
+      <p [innerHTML]="'TOOLKIT.OTHER'|translate"></p>
+    </div>
+    <div class="flex-one">
+      <!-- SPACER -->
+    </div>
   </div>
 </div>
 
+<!-- CONTACT -->
 <div id="contact" class="section page-contact">
   <h1 class="uppercase">{{'CONTACT.LETSTALK'|translate}}</h1>
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit" class="contact-form">
+  <div class="ribbon-success" *ngIf="isSuccess">{{'CONTACT.SUCCESS'|translate}}</div>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
     <div class="form-item">
       <md-input-container>
         <input 
@@ -86,13 +109,18 @@
     <div class="form-item form-submit">
       <button 
         md-raised-button 
+        [disabled]="isOnSubmit || !contactForm.valid"
         color="primary"
         type="submit"
-        (click)="onSubmit">{{'CONTACT.FORM.SEND'|translate}}</button>
+        (click)="onSubmit()">
+        {{'CONTACT.FORM.SEND'|translate}}
+      </button>
+      <md-spinner *ngIf="isOnSubmit"></md-spinner>
     </div>
   </form>
 </div>
 
+<!-- FOOTER -->
 <div class="section page-footer">
   <div class="flex-one">
     <a scrollTo href="#welcome">
