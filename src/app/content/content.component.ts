@@ -51,8 +51,8 @@ export class ContentComponent implements OnInit {
     });
     translate.get('APP.KEYWORDS').subscribe(keywords => meta.setTag('keywords', keywords));
     meta.setTag('og:type', 'article');
-    meta.setTag('og:image', 'linkToImage');
-    meta.setTag('twitter:image', 'linkToImage');
+    meta.setTag('og:image', CONFIG.URL + 'assets/icons/image-500x500.png');
+    meta.setTag('twitter:image', CONFIG.URL + 'assets/icons/image-500x500.png');
     meta.setTag('twitter:card', 'summary_large_image');
   }
 
