@@ -1,12 +1,27 @@
 @import "~bootstrap/scss/utilities";
 
 body {
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(xs) {
     .hide-xs {
-      display: none;
+      display: none !important;
     }
     .show-xs {
-      display: block;
+      display: block !important;
+    }
+    .flex-container {
+      .flex-one {
+        padding: 0 !important;
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .hide-sm {
+      display: none !important;
+    }
+    .show-sm {
+      display: block !important;
     }
     .flex-container {
       .flex-one {
@@ -18,29 +33,29 @@ body {
   }
   @include media-breakpoint-up(md) {
     .hide-md {
-      display: none;
+      display: none !important;
     }
     .show-md {
-      display: block;
+      display: block !important;
     }
     .flex-container {
       .flex-one {
-        padding: 0 $gutter-big;
+        padding: 0 $gutter-big !important;
         flex-basis: 50% !important;
         max-width: 50% !important;
       }
     }
   }
   @include media-breakpoint-up(lg) {
-    .hide-md {
-      display: none;
+    .hide-lg {
+      display: none !important;
     }
-    .show-md {
-      display: block;
+    .show-lg {
+      display: block !important;
     }
     .flex-container {
       .flex-one {
-        padding: 0 $gutter-big;
+        padding: 0 $gutter-big !important;
         flex-basis: 33% !important;
         max-width: 33% !important;
       }

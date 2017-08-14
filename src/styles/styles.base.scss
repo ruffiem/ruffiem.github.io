@@ -26,12 +26,26 @@ button:focus {
   outline: none;
 }
 
-.flex-one {
-  flex: 1 1 auto;
-}
-
 a:hover, a:focus, a:active {
   color: currentColor;
   text-decoration: none;
   outline: none;
+}
+
+.flex-one {
+  flex: 1 1 auto;
+}
+
+.link {
+  cursor: pointer;
+  color: mat-color($blue, 700);
+  &:hover, &:focus, &:active {
+    color: currentColor;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+.re-flex {
+  @include flex;
 }

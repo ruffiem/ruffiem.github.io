@@ -1,5 +1,4 @@
 @import '../../styles/styles.mixins';
-
 :host {
   @include dimension(100%, 100%);
   @include flex(column, flex-start);

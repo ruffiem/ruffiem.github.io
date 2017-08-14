@@ -12,16 +12,19 @@ import { MetaService } from '@ngx-meta/core';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  passForm: FormGroup;
+  showPassForm: boolean;
 
   constructor(private fb: FormBuilder,
               translate: TranslateService,
               meta: MetaService) {
-    translate.get('LOGIN.CUSTOMER').subscribe(name => {
+    translate.get('LOGIN.TITLE').subscribe(name => {
       meta.setTitle(name);
       meta.setTag('twitter:title', name);
     });
     meta.setTag('description', '');
     meta.setTag('twitter:description', '');
+    this.showPassForm = false;
   }
 
   ngOnInit() {
@@ -29,9 +32,16 @@ export class LoginComponent implements OnInit {
       user: ['', Validators.required],
       pass: ['', Validators.required]
     });
+    this.passForm = this.fb.group({
+      user: ['', Validators.required]
+    });
   }
 
   onSubmit() {
     console.log('submit');
+  }
+
+  onSubmitPass() {
+    console.log('submit pass lost');
   }
 }

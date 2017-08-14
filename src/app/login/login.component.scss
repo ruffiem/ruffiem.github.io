@@ -26,15 +26,23 @@
     bottom: 0;
     left: 0;
   }
+  .login-wrapper {
+    width: 100%;
+  }
   form {
     @include flex(column);
     width: 100%;
     padding: $gutter;
-    md-input-container, button {
+    md-input-container,
+    button {
       width: 100%;
     }
     /deep/ .mat-placeholder-required {
       color: currentColor !important;
     }
+  }
+  .link {
+    align-self: flex-start;
+    padding: 0 $gutter;
   }
 }

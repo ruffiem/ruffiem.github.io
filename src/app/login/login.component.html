@@ -7,13 +7,25 @@
 <div class="ticket">
   <i class="icon-frontflow big-title"></i>
   <p class="small-title">{{'LOGIN.CUSTOMER'|translate}}</p>
-  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <md-input-container>
-      <input mdInput required formControlName="user" type="text" placeholder="{{'LOGIN.USER'|translate}}" value="value">
-    </md-input-container>
-    <md-input-container>
-      <input mdInput required formControlName="pass" type="password" placeholder="{{'LOGIN.PASS'|translate}}" value="value">
-    </md-input-container>
-    <button md-raised-button color="primary">{{'LOGIN.SUBMIT'|translate}}</button>
-  </form>
+  <div class="login-wrapper" *ngIf="!showPassForm; else passLost">
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <md-input-container>
+        <input mdInput required formControlName="user" type="text" placeholder="{{'LOGIN.USER'|translate}}">
+      </md-input-container>
+      <md-input-container>
+        <input mdInput required formControlName="pass" type="password" placeholder="{{'LOGIN.PASS'|translate}}">
+      </md-input-container>
+      <button md-raised-button color="primary" type="submit">{{'LOGIN.SUBMIT'|translate}}</button>
+    </form>
+    <span class="link" (click)="showPassForm = !showPassForm">{{'LOGIN.FORGOTTEN'|translate}}</span>  
+  </div>
+  <ng-template #passLost>
+    <form class="pass-form" [formGroup]="passForm" (ngSubmit)="onSubmitPass()">
+      <md-input-container>
+        <input mdInput required formControlName="user" type="text" placeholder="{{'LOGIN.USER'|translate}}">
+      </md-input-container>
+      <button md-raised-button color="primary" type="submit">{{'SEND'|translate}}</button>
+    </form>
+    <span class="link" (click)="showPassForm = !showPassForm">{{'LOGIN.BACKTOLOGIN'|translate}}</span>      
+  </ng-template>
 </div>

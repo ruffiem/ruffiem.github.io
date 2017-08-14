@@ -1,3 +1,4 @@
+import { VideoComponent } from './components/video/video.component';
 import { Http, HttpModule } from '@angular/http';
 import { MailService } from './services/mail.service';
 import { NgModule } from '@angular/core';
@@ -31,8 +32,10 @@ import { TranslateModule } from '@ngx-translate/core';
     RouterModule,
     TranslateModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    VideoComponent
   ],
+  declarations: [VideoComponent],
   providers: [MailService]
 })
 export class SharedModule { }

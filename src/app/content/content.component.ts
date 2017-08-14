@@ -18,23 +18,16 @@ import { MetaService } from '@ngx-meta/core';
 export class ContentComponent implements OnInit {
 
   contactForm: FormGroup;
-  scrollEvent: Event;
   maxMessage: number;
   minMessage: number;
   isOnSubmit: boolean;
   isSuccess: boolean;
   year: number;
 
-  @HostListener('scroll', ['$event'])
-  onScroll(event: Event) {
-    this.scrollEvent = event;
-  }
-
   constructor(private fb: FormBuilder,
               private mail: MailService,
               translate: TranslateService,
               meta: MetaService) {
-    this.scrollEvent = null;
     this.minMessage = 20;
     this.maxMessage = 200;
     this.isOnSubmit = false;
@@ -50,10 +43,6 @@ export class ContentComponent implements OnInit {
       meta.setTag('twitter:description', desc);
     });
     translate.get('APP.KEYWORDS').subscribe(keywords => meta.setTag('keywords', keywords));
-    meta.setTag('og:type', 'article');
-    meta.setTag('og:image', CONFIG.URL + 'assets/icons/image-500x500.png');
-    meta.setTag('twitter:image', CONFIG.URL + 'assets/icons/image-500x500.png');
-    meta.setTag('twitter:card', 'summary_large_image');
   }
 
   ngOnInit() {

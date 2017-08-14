@@ -1,0 +1,15 @@
+@import '../../../../styles/styles.variables';
+@import '../../../../styles/styles.mixins';
+:host {
+  @include dimension;
+  background: mat-color($grey, 900);
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  video {
+    @include dimension(auto, 100%);
+    @include position(50%, 50%);
+  }
+}

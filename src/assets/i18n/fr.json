@@ -48,13 +48,18 @@
     }
   },
   "FOOTER": {
-    "WEBUILD": ""
+    "PREBUILT": "Développé avec",
+    "POSTBUILT": "à Genève, Suisse."
   },
   "LOGIN": {
-    "CUSTOMER": "Espace client. FrontFlow.",
+    "TITLE": "Espace client. FrontFlow.",
+    "CUSTOMER": "Espace client",
     "USER": "Utilisateur (nom ou e-mail)",
     "PASS": "Mot de passe",
-    "SUBMIT": "Connexion"
+    "SUBMIT": "Connexion",
+    "FORGOTTEN": "Mot de passe oublié ?",
+    "BACKTOLOGIN": "Retour au Login"
   },
-  "BACK": "Retour au site"
+  "BACK": "Retour au site",
+  "SEND": "Envoyer"
 }
