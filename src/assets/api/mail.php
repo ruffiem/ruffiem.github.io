@@ -26,12 +26,14 @@ function sendMail() {
           <tr>
             <th><b>Name</b></th>
             <th><b>Email</b></th>
+            <th><b>Company</b></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>'.$content->name.'</td>
             <td>'.$content->from.'</td>
+            <td>'.$content->company.'</td>
           </tr>
         </tbody>
       </table>

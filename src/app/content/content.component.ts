@@ -2,7 +2,15 @@ import { HttpResponse } from '@angular/common/http/src/response';
 import { MailFormat } from '../shared/models/mail.model';
 import { MailService } from '../shared/services/mail.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Component, HostListener, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { CONFIG } from '../app.config';
@@ -24,8 +32,20 @@ export class ContentComponent implements OnInit {
   isSuccess: boolean;
   year: number;
 
+  @ViewChild('scrollInvite') scrollInvite: ElementRef;
+
+  @HostListener('scroll', ['$event'])
+  removeScrollInvite(event: Event) {
+    if (event.target['scrollTop'] > 16) {
+      this.renderer.setProperty(this.scrollInvite.nativeElement, 'hidden', true);
+    } else {
+      this.renderer.removeAttribute(this.scrollInvite.nativeElement, 'hidden');
+    }
+  }
+
   constructor(private fb: FormBuilder,
               private mail: MailService,
+              private renderer: Renderer2,
               translate: TranslateService,
               meta: MetaService) {
     this.minMessage = 20;
@@ -49,6 +69,7 @@ export class ContentComponent implements OnInit {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      company: [''],
       message: ['', [Validators.required, Validators.minLength(this.minMessage), Validators.maxLength(this.maxMessage)]]
     });
   }
@@ -60,6 +81,7 @@ export class ContentComponent implements OnInit {
       to: CONFIG.EMAIL,
       from: this.contactForm.controls['email'].value,
       name: this.contactForm.controls['name'].value,
+      company: this.contactForm.controls['company'].value,
       message: this.contactForm.controls['message'].value
     };
 

@@ -1,0 +1,72 @@
+{
+  "APP": {
+    "TITLE": "Tailored Web & Mobile Developments. FrontFlow.",
+    "DESCRIPTION": "FrontFlow is specialised in web applications and mobile developments.",
+    "KEYWORDS": "create website, website geneva, web development, user interface, user experience, ux geneva, web agency geneva, angular developer, angular application, mobile development cordova, cordova developer, web application development geneva",
+    "LANGUAGE": {
+      "FR": "FR",
+      "EN": "EN"
+    }
+  },
+  "HEADER": {
+    "LINK": {
+      "SERVICES": "Our Skills",
+      "TOOLKIT": "Our Tools",
+      "CONTACT": "Contact us"
+    }
+  },
+  "WELCOME": {
+    "CATCHPHRASE": "We build interfaces.",
+    "WEARE": "FrontFlow is specialised in web applications and mobile developments."
+  },
+  "SERVICES": {
+    "TITLE": "Our skills at your service.",
+    "UX": "<b>FrontFlow</b> crafts <strong>web interfaces</strong> accordingly to your business and create quality <strong>user experiences</strong> to gain visitors and <b>engage your customers</b>.",
+    "CODE": "With over <b>15 years of experience</b> in web development, our workflow is safe and we always make choices that perfectly suit your needs.",
+    "BACKEND": "No matter what you use as <strong>back-end technology</strong> (PHP, Java, other), we will define the best way to consume your data together.",
+    "TESTING": "We use <strong>unit tests</strong> to ensure that every piece of code is clean before it goes to production. Each module is tested several times during the process.",
+    "DEVICE": "Our applications are <b>naturally responsive</b> to all types of device screens: laptops, tablets and smartphones.",
+    "WORK": "You can follow <b>the progress of your project</b> anywhere, anytime, in the <a href='login' class='link'>customer portal</a>."
+  },
+  "TOOLKIT": {
+    "TITLE": "A tailor-cut toolkit.",
+    "ANGULAR": "<strong>Angular</strong> is a kick-ass JavaScript framework developed by Google to create amazing applications.",
+    "SASS": "For styles, we build everything using <strong>SASS</strong>. It increases productivity and avoid code duplication.",
+    "TYPESCRIPT": "With <strong>TypeScript</strong>, we can now make <strong>JavaScript</strong> cleaner and maintainable. Less garbage, more code !",
+    "CORDOVA": "We use <strong>Cordova</strong> to make your application available on most stores (Google Play, AppStore & Windows Store).",
+    "OTHER": "We master other technologies such as <strong>back-end</strong>, <strong>continuous integration</strong> and mobile device management."
+  },
+  "CONTACT": {
+    "LETSTALK": "Let's talk about your project !",
+    "SUCCESS": "Thank you for your message, we will be responding ASAP.",
+    "FORM": {
+      "NAME": "Enter your name",
+      "EMAIL": "Enter your e-mail address",
+      "COMPANY": "Enter your company name",
+      "MESSAGE": "Your message",
+      "SEND": "Let's talk !",
+      "ERROR": {
+        "REQUIRED": "This field cannot be empty.",
+        "EMAIL": "The e-mail your entered is invalid.",
+        "MINLENGTH": "Your message must contain at least {{ value }} characters.",
+        "MAXLENGTH": "Your message is too long ({{ value }} characters max)."
+      }
+    }
+  },
+  "FOOTER": {
+    "PREBUILT": "Built with",
+    "POSTBUILT": "in Geneva, Switzerland."
+  },
+  "LOGIN": {
+    "TITLE": "Customer portal. FrontFlow.",
+    "CUSTOMER": "Customer portal",
+    "USER": "User (name or e-mail)",
+    "PASS": "Password",
+    "SUBMIT": "Login",
+    "FORGOTTEN": "Forgotten password ?",
+    "BACKTOLOGIN": "Back to Login"
+  },
+  "BACK": "Back to website",
+  "SEND": "Send",
+  "SCROLL_INVITE": "Scroll down"
+}

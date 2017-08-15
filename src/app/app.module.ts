@@ -40,7 +40,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 })
 export class AppModule {
   constructor(translate: TranslateService) {
+    const currentLang = window.localStorage.getItem('lang') || 'fr';
     translate.setDefaultLang('fr');
-    translate.use('fr');
+    translate.use(currentLang);
   }
 }

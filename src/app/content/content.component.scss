@@ -1,5 +1,6 @@
 @import '../../styles/styles.variables';
 @import '../../styles/styles.mixins';
+@import '../../styles/styles.animation';
 :host {
   @include dimension(100%, 100%);
   position: relative;
@@ -15,22 +16,21 @@
       border-bottom: 1px solid mat-color($grey, 300);
     } 
     &.page-welcome{
-      background-color: transparent !important;
+      background-image: url("/assets/resources/jumbo.jpg");
+      background-size: cover;
+      background-position: bottom center;
       border-top: 0px !important;
 
       h1, h3 {
-        color: white;
-        text-shadow: 0px 0px 3px mat-color($grey, 700);
+        background: rgba(255,255,255,.9);
+        padding: $gutter;
       }
     }
   }
   .page-welcome {
     margin: 0 auto;
-    padding: 10rem $gutter;
-    position: relative; 
-    // background-image: url('/assets/resources/desk.png');
-    // background-size: cover;
-    // background-position: center bottom;
+    padding: 15rem $gutter;
+    position: relative;
   } 
   .we-are {
     margin-top: $gutter-big;
@@ -43,11 +43,20 @@
     @include dimension(auto, auto);
     font-size: 5rem;
   }
+  .scroll-invite {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    animation: bouncing 5s infinite;
+  }
   .flex-container {
     @include flex(row, flex-start, space-between, wrap, true);
     @include dimension(100%, auto);
     padding: $gutter;
+
     .flex-one {
+      position: relative;
       flex: 1;
       margin-bottom: $gutter-big;
       img {

@@ -1,0 +1,31 @@
+@mixin animate($class) {
+  @for $i from 1 through 10 {
+    $b: $i * 200;
+    .#{$class}:nth-child(#{$i}) {
+      opacity: 1;
+      top: 0;
+      transition-delay: #{$b}ms;
+    }
+  }
+}
+
+@keyframes bouncing {
+  0% {
+    bottom: $gutter;
+  }
+  3% {
+    bottom: 2rem;
+  }
+  6% {
+    bottom: $gutter;
+  }
+  9% {
+    bottom: 1.5rem;
+  }
+  12% {
+    bottom: $gutter;
+  }
+  100% {
+    bottom: $gutter;
+  }
+}

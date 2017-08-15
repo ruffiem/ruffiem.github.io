@@ -3,9 +3,10 @@ import { HeaderModule } from '../header/header.module';
 import { NgModule } from '@angular/core';
 
 import { SpaComponent } from './spa.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  imports: [HeaderModule, ContentModule],
+  imports: [SharedModule, HeaderModule, ContentModule],
   exports: [],
   declarations: [SpaComponent],
   providers: [],

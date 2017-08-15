@@ -5,15 +5,18 @@
   </a>
   <a href="#services" scrollTo md-button class="hide-sm">{{'HEADER.LINK.SERVICES'|translate}}</a>
   <a href="#toolkit" scrollTo md-button class="hide-sm">{{'HEADER.LINK.TOOLKIT'|translate}}</a>
+  <a href="#contact" scrollTo md-button class="hide-sm">{{'HEADER.LINK.CONTACT'|translate}}</a>
 </div>
 <div class="flex-one">
   <!-- <a href="tel:{{websitePhone}}" md-button>
     <md-icon>phone</md-icon>
     <span>{{websitePhone}}</span>
   </a> -->
-  <a href="#contact" scrollTo md-icon-button>
-    <md-icon>mail_outline</md-icon>
-  </a>
+
+  <button md-icon-button (click)="switchLang()">
+    {{ notCurrentLang() | uppercase }}
+  </button>
+
   <a routerLink="/login" md-icon-button>
     <md-icon>person</md-icon>
   </a>

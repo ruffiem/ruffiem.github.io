@@ -44,6 +44,17 @@ body {
         flex-basis: 50% !important;
         max-width: 50% !important;
       }
+      &.animate-content {
+        .flex-one {
+          transition: opacity 500ms ease-in-out, top 500ms ease-in-out;
+          top: $gutter-big;
+          opacity: 0;
+        }
+      }
+  
+      &.animate-content.animate {
+        @include animate(flex-one);
+      }
     }
   }
   @include media-breakpoint-up(lg) {

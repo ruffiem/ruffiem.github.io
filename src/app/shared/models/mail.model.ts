@@ -3,4 +3,5 @@ export interface MailFormat {
   to: string;
   message: string;
   name: string;
+  company: string;
 }
