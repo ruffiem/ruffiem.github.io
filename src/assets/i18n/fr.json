@@ -1,7 +1,7 @@
 {
   "APP": {
-    "TITLE": "Développement Web & Mobile Sur Mesure. FrontFlow.",
-    "DESCRIPTION": "FrontFlow est spécialisé dans le développement d'applications web et mobile.",
+    "TITLE": "Développement web et mobile, création de site internet à Genève. FrontFlow.",
+    "DESCRIPTION": "FrontFlow est spécialisé dans le développement d'interfaces utilisateur pour des applications web et mobile.",
     "KEYWORDS": "creation de site, site web geneve, developpement web, interface utilisateur, experience utilisateur, ux geneve, agence web geneve, site web geneve, developpeur angular, site angular, developpement mobile cordova, developpeur cordova, developpement application web geneve",
     "LANGUAGE": {
       "FR": "FR",
@@ -12,12 +12,12 @@
     "LINK": {
       "SERVICES": "Notre Expertise",
       "TOOLKIT": "Nos Outils",
-      "CONTACT": "Contactez-nous"
+      "STUDY": "Etudes de Cas",
+      "CONTACT": "Contact"
     }
   },
   "WELCOME": {
-    "CATCHPHRASE": "Nous développons vos interfaces.",
-    "WEARE": "FrontFlow est spécialisé dans le développement d'applications web et mobile."
+    "CATCHPHRASE": "Nous créons des expériences utilisateurs."
   },
   "SERVICES": {
     "TITLE": "Notre expertise à votre service.",
@@ -26,23 +26,24 @@
     "BACKEND": "Quelque soit votre <strong>technologie back-end</strong> (PHP, Java, autres), nous définirons ensemble le meilleur moyen d'accéder à vos données.",
     "TESTING": "Nous validons nos itérations par le biais de <strong>tests unitaires</strong>. Chaque module est évalué plusieurs fois avant sa mise en production.",
     "DEVICE": "Tous nos développements sont <b>naturellement adaptés</b> à tous les écrans: ordinateurs de bureau, tablettes et téléphones mobiles.",
-    "WORK": "Vous pouvez suivre en tout temps <b>la progression de votre projet</b> en temps réel sur votre <a href='login' class='link'>espace personnel</a>."
+    "WORK": "Vous pouvez suivre en tout temps <b>la progression de votre projet</b> partout en temps réel sur votre <a href='login' class='link'>espace personnel</a>."
   },
   "TOOLKIT": {
     "TITLE": "Un outillage sur mesure.",
     "ANGULAR": "<strong>Angular</strong> est un framework fiable et robuste pour la création d'applications web et mobile performantes reposant sur une structure claire et maintenable.",
     "SASS": "Avec <strong>SASS</strong> pour la création des feuilles de style de votre application, la productivité et leur modification sont nettement améliorées.",
     "TYPESCRIPT": "<strong>TypeScript</strong> nous permet de produire du <strong>JavaScript</strong> propre et durable. Moins de duplication, plus de code !",
-    "CORDOVA": "Nous utilisons <strong>Cordova</strong> afin de déposer votre application sur les différents stores (Google Play, AppStore & Windows Store).",
+    "LUMEN": "FrontFlow est <strong>expert front-end</strong> mais nous pouvons développer pour vous des API en PHP. Nous travaillons avec le framework <strong>Lumen</strong>.",
+    "CORDOVA": "Nous utilisons <strong>Cordova</strong> afin de déployer votre application sur les différents stores (Google Play, AppStore & Windows Store).",
     "OTHER": "Nous maitrisons aussi bien d'autres technologies dans les domaines du <strong>back-end</strong>, de l'<strong>intégration continue</strong> et de la gestion des terminaux à distance."
   },
   "CONTACT": {
     "LETSTALK": "Discutons de votre projet !",
     "SUCCESS": "Merci pour votre message, nous vous répondrons dans les plus brefs délais.",
     "FORM": {
-      "NAME": "Saisissez votre nom",
-      "EMAIL": "Saisissez votre adresse e-mail",
-      "COMPANY": "Saisissez le nom de votre société",
+      "NAME": "Votre nom",
+      "EMAIL": "Votre adresse e-mail",
+      "COMPANY": "Nom de votre société",
       "MESSAGE": "Votre message",
       "SEND": "Discutons !",
       "ERROR": {
@@ -68,5 +69,26 @@
   },
   "BACK": "Retour au site",
   "SEND": "Envoyer",
-  "SCROLL_INVITE": "Défilez vers le bas"
+  "SCROLL_INVITE": "Défilez vers le bas",
+  "STUDY": {
+    "TITLE": "Cas pratiques",
+    "CASE": {
+      "REVAMP": {
+        "TITLE": "Refonte de site web",
+        "CONTENT": "En tant qu'agence de <strong>développement front-end</strong>, c'est une demande typique de nos clients. Ils ont un site vieillissant et souhaitent quelque chose de plus moderne. Cela peut sembler trivial mais chaque projet à ses difficultés. Le plus difficile dans la <strong>refonte d'un site internet</strong> est de faire respecter les <b>bonnes pratiques</b> à un site existant qui ne les utilise pas ou encore de garder l'esprit du site pour ne pas perdre ses utilisateurs en chemin. Les étapes de rafraîchissement d'un site passent notamment par <strong>l'analyse de l'architecture du contenu</strong>, la <b>mise en évidence des priorités</b> pour les divers personas et enfin la création du thème et son <strong>intégration HTML</strong>."
+      },
+      "FULLSTACK": {
+        "TITLE": "Front + Back-end",
+        "CONTENT": "Un site internet est l'union d'un <strong>environnement front-end</strong> et d'une <strong>couche de données back-end</strong>. Il arrive que des clients n'aient ni l'un, ni l'autre. Dans ce cas, nous nous occupons aussi bien du <strong>développement de l'interface graphique</strong> que du back-end &mdash; éventuellement d'une API REST. Les technologies choisies reposent sur notre synthèse de la description client ainsi que des contraintes technologiques. Souvent, un client préférera une technologie qu'il connait déjà plutôt que de basculer sur un système plus approprié mais qu'il ne connait pas. Dans tous les cas, nous nous efforçons d'être au plus juste afin de pouvoir délivrer un <strong>produit de qualité</strong> reconnu par le client et l'utilisateur final."  
+      },
+      "API": {
+        "TITLE": "Consommation d'API",
+        "CONTENT": "Tout le système est en place mais <strong>l'interface graphique</strong> ne tient pas la route ? Aucun problème, nous sommes là pour ça. La consommation des APIs par le client est un cas typique de notre métier. Ainsi, notre travail consistera à <strong>définir le binome routes -> réponse</strong> et puis laisser le client traiter l'information reçue pour générer la vue. Encore ici, ce qui parait trivial peut rapidement devenir très complexe, notamment s'il s'agit d'une <strong>API historique</strong> mais des solutions afin d'améliorer la <strong>relation client <> serveur</strong> seront fournies. Enfin, l'évaluation qualitative de l'API fait partie du plan analytique."
+      },
+      "STORE": {
+        "TITLE": "Vers les stores",
+        "CONTENT": "Il existe plusieurs étapes entre le développement d'une application et son <strong>déployement sur un store</strong>. Au niveau du code, il faut s'adapter au terminal (accès aux APIs natives). Au niveau de la compilation, il existe une part non négligeable de <b>gestion des signatures</b> de paquets ainsi que leur consolidation en fonction du store cible (Public, In-House, Ad-hoc, etc.). Les <strong>stores privés</strong> comme AirWatch, appelé <strong>\"MDM\"</strong> (<em>Mobile Device Management</em>) nécessitent des connaissances spécifiques pour résoudre certains points critiques tels que la <strong>gestion des droits</strong> ou le paramètrage à distance."
+      }
+    }
+  }
 }

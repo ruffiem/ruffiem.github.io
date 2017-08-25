@@ -1,10 +1,16 @@
-@import '../../styles/styles.variables';
-@import '../../styles/styles.mixins';
+@import '../../../styles/styles.variables';
+@import '../../../styles/styles.mixins';
 :host {
   @include dimension(100%, auto, $gutter);
   @include colorize($indigo, 500);
   @include flex;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 
+              0 6px 10px 0 rgba(0,0,0,.14), 
+              0 1px 18px 0 rgba(0,0,0,.12);
   flex-shrink: 0;
+  .hidden {
+    display: none;
+  }
   .flex-one {
     @include truncate;
   }

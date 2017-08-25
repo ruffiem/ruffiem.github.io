@@ -1,6 +1,6 @@
-@import '../../styles/styles.variables';
-@import '../../styles/styles.mixins';
-@import '../../styles/styles.animation';
+@import '../../../styles/styles.variables';
+@import '../../../styles/styles.mixins';
+@import '../../../styles/styles.animation';
 :host {
   @include dimension(100%, 100%);
   position: relative;
@@ -10,7 +10,7 @@
   }
   .section {
     padding: $gutter-big;
-    &:not(.page-footer):nth-child(odd) {
+    &:not(.page-footer):nth-child(even) {
       @include colorize($grey, 100);
       border-top: 1px solid mat-color($grey, 300);
       border-bottom: 1px solid mat-color($grey, 300);
@@ -28,9 +28,9 @@
     }
   }
   .page-welcome {
-    margin: 0 auto;
-    padding: 15rem $gutter;
-    position: relative;
+    height: 30rem;
+    padding: $gutter;
+    @include flex(column, center, center);
   } 
   .we-are {
     margin-top: $gutter-big;
@@ -48,7 +48,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
-    animation: bouncing 5s infinite;
+    animation: bouncing 2s infinite ease-in-out;
   }
   .flex-container {
     @include flex(row, flex-start, space-between, wrap, true);
@@ -89,18 +89,23 @@
     md-input-container {
       width: 100%;
     }
-    /deep/ .mat-placeholder-required {
+    ::ng-deep .mat-placeholder-required {
       color: currentColor;
     }
     &.form-submit {
       @include flex(row, center, center, nowrap, true);
-      /deep/ .mat-spinner {
+      ::ng-deep .mat-spinner {
         @include dimension(25px, 25px);
         margin-left: $gutter;
         path {
           stroke: mat-color($indigo, 500);
         }
       }
+    }
+  }
+  .page-study {
+    ::ng-deep .mat-tab-label {
+      min-width: fit-content;
     }
   }
   .page-contact {
@@ -139,5 +144,11 @@
   .logo-small {
     font-size: 1.5rem;
     margin: 0 $gutter-small;
+  }
+  .mat-tab-group {
+    width: 100%;
+  }
+  .study-wrapper {
+    padding: $gutter;
   }
 }

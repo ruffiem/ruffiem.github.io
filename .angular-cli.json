@@ -8,6 +8,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
+        "index2.html",
         "assets"
       ],
       "index": "index.html",

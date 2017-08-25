@@ -4,9 +4,11 @@
 </div>
 
 <!-- SCROLL INVITE -->
-<div class="scroll-invite hide-sm" #scrollInvite>
+<div class="scroll-invite hide-sm">
   <a md-button href="#services">
-    <md-icon>arrow_downward</md-icon> {{'SCROLL_INVITE'|translate}} <md-icon>arrow_downward</md-icon>
+    <md-icon>arrow_downward</md-icon>
+    <span>{{'SCROLL_INVITE'|translate}}</span>
+    <md-icon>arrow_downward</md-icon>
   </a>
 </div>
 
@@ -58,6 +60,10 @@
       <p [innerHTML]="'TOOLKIT.TYPESCRIPT'|translate"></p>
     </div>
     <div class="flex-one text-center">
+      <img src="./assets/resources/lumen.svg">
+      <p [innerHTML]="'TOOLKIT.LUMEN'|translate"></p>
+    </div>
+    <div class="flex-one text-center">
       <img src="./assets/resources/cordova.svg">
       <p [innerHTML]="'TOOLKIT.CORDOVA'|translate"></p>
     </div>
@@ -68,6 +74,39 @@
     <div class="flex-one">
       <!-- SPACER -->
     </div>
+  </div>
+</div>
+
+<!-- STUDY -->
+<div id="study" class="section page-study">
+  <h1 class="uppercase">{{'STUDY.TITLE'|translate}}</h1>
+  <div class="flex-container">
+    <md-tab-group>
+      <md-tab label="{{'STUDY.CASE.REVAMP.TITLE'|translate}}">
+        <div class="study-wrapper">
+          <h3>{{'STUDY.CASE.REVAMP.TITLE'|translate}}</h3>
+          <div class="study-section" [innerHTML]="'STUDY.CASE.REVAMP.CONTENT'|translate"></div>
+        </div>
+      </md-tab>
+      <md-tab label="{{'STUDY.CASE.FULLSTACK.TITLE'|translate}}">
+        <div class="study-wrapper">
+          <h3>{{'STUDY.CASE.FULLSTACK.TITLE'|translate}}</h3>
+          <div class="study-section" [innerHTML]="'STUDY.CASE.FULLSTACK.CONTENT'|translate"></div>
+        </div>
+      </md-tab>
+      <md-tab label="{{'STUDY.CASE.API.TITLE'|translate}}">
+        <div class="study-wrapper">
+          <h3>{{'STUDY.CASE.API.TITLE'|translate}}</h3>
+          <div class="study-section" [innerHTML]="'STUDY.CASE.API.CONTENT'|translate"></div>
+        </div>
+      </md-tab>
+      <md-tab label="{{'STUDY.CASE.STORE.TITLE'|translate}}">
+        <div class="study-wrapper">
+          <h3>{{'STUDY.CASE.STORE.TITLE'|translate}}</h3>
+          <div class="study-section" [innerHTML]="'STUDY.CASE.STORE.CONTENT'|translate"></div>
+        </div>
+      </md-tab>
+    </md-tab-group>
   </div>
 </div>
 

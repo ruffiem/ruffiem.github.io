@@ -1,20 +1,21 @@
-import { HttpResponse } from '@angular/common/http/src/response';
-import { MailFormat } from '../shared/models/mail.model';
-import { MailService } from '../shared/services/mail.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   ElementRef,
   HostListener,
+  OnDestroy,
   OnInit,
   Renderer2,
   ViewChild,
 } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { CONFIG } from '../app.config';
 import { MetaService } from '@ngx-meta/core';
+import { Subscription } from 'rxjs/Subscription';
+import { CONFIG } from '../../app.config';
+import { MailFormat } from '../../shared/models/mail.model';
+import { MailService } from '../../shared/services/mail.service';
 
 @Component({
   selector: 'app-content',
@@ -23,7 +24,7 @@ import { MetaService } from '@ngx-meta/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class ContentComponent implements OnInit {
+export class ContentComponent implements OnInit, OnDestroy {
 
   contactForm: FormGroup;
   maxMessage: number;
@@ -32,46 +33,37 @@ export class ContentComponent implements OnInit {
   isSuccess: boolean;
   year: number;
 
-  @ViewChild('scrollInvite') scrollInvite: ElementRef;
-
-  @HostListener('scroll', ['$event'])
-  removeScrollInvite(event: Event) {
-    if (event.target['scrollTop'] > 16) {
-      this.renderer.setProperty(this.scrollInvite.nativeElement, 'hidden', true);
-    } else {
-      this.renderer.removeAttribute(this.scrollInvite.nativeElement, 'hidden');
-    }
-  }
+  subscriptions: Subscription[];
 
   constructor(private fb: FormBuilder,
+              private ref: ChangeDetectorRef,
               private mail: MailService,
               private renderer: Renderer2,
-              translate: TranslateService,
-              meta: MetaService) {
+              private translate: TranslateService,
+              private meta: MetaService) {
+    this.onLangChange();
     this.minMessage = 20;
     this.maxMessage = 200;
     this.isOnSubmit = false;
     this.isSuccess = false;
+    this.subscriptions = [];
     this.year = new Date().getFullYear();
-
-    translate.get('APP.TITLE').subscribe(name => {
-      meta.setTitle(name);
-      meta.setTag('twitter:title', name);
-    });
-    translate.get('APP.DESCRIPTION').subscribe(desc => {
-      meta.setTag('description', desc);
-      meta.setTag('twitter:description', desc);
-    });
-    translate.get('APP.KEYWORDS').subscribe(keywords => meta.setTag('keywords', keywords));
   }
 
   ngOnInit() {
+    this.subscriptions.push(
+      this.translate.onLangChange.subscribe(translation => this.onLangChange())
+    );
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       company: [''],
       message: ['', [Validators.required, Validators.minLength(this.minMessage), Validators.maxLength(this.maxMessage)]]
     });
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.forEach(s => s.unsubscribe());
   }
 
   onSubmit() {
@@ -93,6 +85,19 @@ export class ContentComponent implements OnInit {
           this.contactForm.disable();
           this.contactForm.markAsPristine();
         }
+        this.ref.markForCheck();
       });
+  }
+
+  onLangChange() {
+    this.translate.get('APP.TITLE').subscribe(name => {
+      this.meta.setTitle(name);
+      this.meta.setTag('twitter:title', name);
+    });
+    this.translate.get('APP.DESCRIPTION').subscribe(desc => {
+      this.meta.setTag('description', desc);
+      this.meta.setTag('twitter:description', desc);
+    });
+    this.translate.get('APP.KEYWORDS').subscribe(keywords => this.meta.setTag('keywords', keywords));
   }
 }

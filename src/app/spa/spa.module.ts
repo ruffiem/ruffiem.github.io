@@ -1,5 +1,5 @@
-import { ContentModule } from '../content/content.module';
-import { HeaderModule } from '../header/header.module';
+import { ContentModule } from './content/content.module';
+import { HeaderModule } from './header/header.module';
 import { NgModule } from '@angular/core';
 
 import { SpaComponent } from './spa.component';

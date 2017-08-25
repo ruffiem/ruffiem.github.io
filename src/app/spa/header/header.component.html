@@ -1,0 +1,47 @@
+<div class="flex-one inline-list">
+  <a href="/">
+    <i class="icon-logo logo-full"></i>
+    <i class="icon-frontflow logo-full"></i>
+  </a>
+  <a href="#services" scrollTo md-button class="hide-sm">{{'HEADER.LINK.SERVICES'|translate}}</a>
+  <a href="#toolkit" scrollTo md-button class="hide-sm">{{'HEADER.LINK.TOOLKIT'|translate}}</a>
+  <a href="#study" scrollTo md-button class="hide-sm">{{'HEADER.LINK.STUDY'|translate}}</a>
+  <a href="#contact" scrollTo md-button class="hide-sm">{{'HEADER.LINK.CONTACT'|translate}}</a>
+</div>
+<div class="flex-one">
+  <a href="tel:{{websitePhone|format: 'trim'}}" md-button class="hide-xs">
+    <md-icon>phone</md-icon>
+    <span>{{websitePhone}}</span>
+  </a>
+  <button md-icon-button (click)="switchLang()" class="hide-sm">
+    {{ notCurrentLang() | uppercase }}
+  </button>
+  <a routerLink="/login" md-icon-button class="hide-sm">
+    <md-icon>person</md-icon>
+  </a>
+  <md-menu #mobileMenu="mdMenu" class="mobile-menu">
+    <a href="#services" scrollTo md-menu-item>
+      <md-icon>code</md-icon>
+      <span>{{'HEADER.LINK.SERVICES'|translate}}</span>
+    </a>
+    <a href="#toolkit" scrollTo md-menu-item>
+      <md-icon>format_paint</md-icon>
+      <span>{{'HEADER.LINK.TOOLKIT'|translate}}</span>
+    </a>
+    <a href="#study" scrollTo md-menu-item>
+      <md-icon>bookmark</md-icon>
+      <span>{{'HEADER.LINK.STUDY'|translate}}</span>
+    </a>
+    <a href="#contact" scrollTo md-menu-item>
+      <md-icon>mail_outline</md-icon>
+      <span>{{'HEADER.LINK.CONTACT'|translate}}</span>
+    </a>
+    <a routerLink="login" scrollTo md-menu-item>
+      <md-icon>person</md-icon>
+      <span>{{'LOGIN.CUSTOMER'|translate}}</span>
+    </a>
+  </md-menu>
+  <button md-icon-button class="hidden show-sm" [mdMenuTriggerFor]="mobileMenu">
+    <md-icon>more_vert</md-icon>
+  </button>
+</div>

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { CONFIG } from '../app.config';
+import { CONFIG } from '../../app.config';
 
 @Component({
   selector: 'app-header',

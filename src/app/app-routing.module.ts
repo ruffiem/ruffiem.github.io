@@ -10,6 +10,10 @@ export const routes: Routes = [
   {
     path: 'login',
     loadChildren: 'app/login/login.module#LoginModule'
+  },
+  {
+    path: 'customer',
+    loadChildren: 'app/customer/customer.module#CustomerModule'
   }
 ];
 

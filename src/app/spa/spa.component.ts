@@ -6,7 +6,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
     <app-content
       spyScroll
       spyWhat="animate-content"
-      doWhat="animate">
+      spyDo="animate"
+      [spyLoop]="false">
     </app-content>`,
   styleUrls: ['spa.component.scss']
 })

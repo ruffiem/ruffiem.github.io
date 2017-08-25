@@ -13,17 +13,8 @@
   0% {
     bottom: $gutter;
   }
-  3% {
-    bottom: 2rem;
-  }
-  6% {
-    bottom: $gutter;
-  }
-  9% {
-    bottom: 1.5rem;
-  }
-  12% {
-    bottom: $gutter;
+  50% {
+    bottom: $gutter-small;
   }
   100% {
     bottom: $gutter;

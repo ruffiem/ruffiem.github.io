@@ -14,6 +14,8 @@ function sendMail() {
 
   $subject = 'New contact from FrontFlow.';
 
+  $company = $content->company ? ' &mdash; '.$content->company : '';
+
   $message = '
   <!doctype HTML>
   <html>
@@ -21,43 +23,18 @@ function sendMail() {
       <title>'.$subject.'</title>
     </head>
     <body>
-      <table>
-        <thead>
-          <tr>
-            <th><b>Name</b></th>
-            <th><b>Email</b></th>
-            <th><b>Company</b></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>'.$content->name.'</td>
-            <td>'.$content->from.'</td>
-            <td>'.$content->company.'</td>
-          </tr>
-        </tbody>
-      </table>
-      <br />
-      <table>
-        <thead>
-          <tr>
-            <th><b>Message</b></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>'.$content->message.'</td>
-          </tr>
-        </tbody>
-      </table>
+      <div style="background: whitesmoke; position: relative; width: 100%; height: 100%; padding: 16px 0; margin: 0; line-height: 1.5;">
+        <div style="padding: 0 16px">'.$content->name.' ('.$content->from.') '.$company.'</div>
+        <div style="padding: 0 16px; margin-top: 16px">'.$content->message.'</div>
+      </div>
     </body>
   </html>
   ';
 
-  if(mail($content->to, $subject, $message, $headers)) {
+  if(mail('', $subject, $message, $headers)) {
     echo true;
   } else {
-    echo 'Mail could not be sent';
+    echo false;
   }
 }
 

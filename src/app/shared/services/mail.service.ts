@@ -1,8 +1,7 @@
+import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { MailFormat } from '../models/mail.model';
-import { Injectable } from '@angular/core';
-
-const API_ENDPOINT = '../../assets/api/mail.php';
+import { CONFIG } from '../../app.config';
 
 @Injectable()
 export class MailService {
@@ -10,6 +9,6 @@ export class MailService {
   constructor(private http: Http) { }
 
   send(data: MailFormat) {
-    return this.http.post(API_ENDPOINT, data);
+    return this.http.post(CONFIG.API.ENDPOINT, data);
   }
 }

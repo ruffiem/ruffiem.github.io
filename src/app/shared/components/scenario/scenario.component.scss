@@ -1,0 +1,10 @@
+@import '../../../../styles/styles.variables';
+@import '../../../../styles/styles.mixins';
+:host {
+  display: block;
+  position: relative;
+  height: 15rem;
+  margin-top: $gutter;
+  background: colorize($grey, 100);
+  overflow: hidden;
+}

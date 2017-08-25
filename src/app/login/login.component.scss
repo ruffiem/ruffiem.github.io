@@ -37,7 +37,7 @@
     button {
       width: 100%;
     }
-    /deep/ .mat-placeholder-required {
+    ::ng-deep .mat-placeholder-required {
       color: currentColor !important;
     }
   }

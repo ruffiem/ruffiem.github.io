@@ -49,3 +49,15 @@ a:hover, a:focus, a:active {
 .re-flex {
   @include flex;
 }
+
+.mobile-menu {
+  .mat-menu-content {
+    min-width: 180px;
+  }
+  .mat-menu-item {
+    height: auto;
+    font-size: 14px;
+    line-height: 1;
+    padding: $gutter-small $gutter;
+  }
+}

@@ -1,6 +1,4 @@
 import { SpaModule } from './spa/spa.module';
-import { ContentModule } from './content/content.module';
-import { HeaderModule } from './header/header.module';
 import { SpaComponent } from './spa/spa.component';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';

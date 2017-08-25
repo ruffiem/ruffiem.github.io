@@ -1,7 +1,7 @@
 {
   "APP": {
-    "TITLE": "Tailored Web & Mobile Developments. FrontFlow.",
-    "DESCRIPTION": "FrontFlow is specialised in web applications and mobile developments.",
+    "TITLE": "Web application and website development in Geneva. FrontFlow.",
+    "DESCRIPTION": "FrontFlow is a web agency specialised in user interface development for web and mobile.",
     "KEYWORDS": "create website, website geneva, web development, user interface, user experience, ux geneva, web agency geneva, angular developer, angular application, mobile development cordova, cordova developer, web application development geneva",
     "LANGUAGE": {
       "FR": "FR",
@@ -12,11 +12,12 @@
     "LINK": {
       "SERVICES": "Our Skills",
       "TOOLKIT": "Our Tools",
-      "CONTACT": "Contact us"
+      "STUDY": "Case Studies",
+      "CONTACT": "Contact Us"
     }
   },
   "WELCOME": {
-    "CATCHPHRASE": "We build interfaces.",
+    "CATCHPHRASE": "We build user experiences.",
     "WEARE": "FrontFlow is specialised in web applications and mobile developments."
   },
   "SERVICES": {
@@ -33,6 +34,7 @@
     "ANGULAR": "<strong>Angular</strong> is a kick-ass JavaScript framework developed by Google to create amazing applications.",
     "SASS": "For styles, we build everything using <strong>SASS</strong>. It increases productivity and avoid code duplication.",
     "TYPESCRIPT": "With <strong>TypeScript</strong>, we can now make <strong>JavaScript</strong> cleaner and maintainable. Less garbage, more code !",
+    "LUMEN": "Though FrontFlow is <strong>front-end expert</strong>, we can build for your API using <strong>Lumen</strong>. A tiny PHP framework great to build RESTFul services.",
     "CORDOVA": "We use <strong>Cordova</strong> to make your application available on most stores (Google Play, AppStore & Windows Store).",
     "OTHER": "We master other technologies such as <strong>back-end</strong>, <strong>continuous integration</strong> and mobile device management."
   },
@@ -40,9 +42,9 @@
     "LETSTALK": "Let's talk about your project !",
     "SUCCESS": "Thank you for your message, we will be responding ASAP.",
     "FORM": {
-      "NAME": "Enter your name",
-      "EMAIL": "Enter your e-mail address",
-      "COMPANY": "Enter your company name",
+      "NAME": "Your fullname",
+      "EMAIL": "Your e-mail address",
+      "COMPANY": "Your company name",
       "MESSAGE": "Your message",
       "SEND": "Let's talk !",
       "ERROR": {
@@ -68,5 +70,26 @@
   },
   "BACK": "Back to website",
   "SEND": "Send",
-  "SCROLL_INVITE": "Scroll down"
+  "SCROLL_INVITE": "Scroll down",
+  "STUDY": {
+    "TITLE": "Case studies",
+    "CASE": {
+      "REFRESH": {
+        "TITLE": "Revamping a website",
+        "CONTENT": "As <strong>front-end development agency</strong>, this is a typical request from customers. Most of them have an website that is getting old and wants something more on shape with trends. It may sound trivial but all projects have its own difficulties. When <strong>revamping a website</strong>, the most difficult thing is make it <strong>follow standards</strong> to an existing website that do not use them or to <strong>keep the spirit of the brand</strong> to keep users comfortable. The steps to revamping goes from <strong>analysing content structure</strong> to set most important information to the personas. Once we've done that, we can <strong>sketch and integrate</strong> the new layout."
+      },
+      "BACKEND": {
+        "TITLE": "Front + Back-end",
+        "CONTENT": "A website is the union of a <strong>front-end environment</strong> and a back-end that usually store datas. Some customer does not have any of them. In this case, <b>we take care of everything</b> : we <strong>build the interface</strong> and the back-end &amp; eventually an <strong>REST API</strong>. The choices we operate relies on the exchange with the client. That is where communication is extremly important to avoid misunderstandings. Most of the time, the client will rather go with a technology he knowns instead of switching on techs that may be more suitable to his needs. In both case, we try to be as close as possible to perfection to deliver a product that the client and the end user will love."
+      },
+      "CONSUME": {
+        "TITLE": "Consuming an API",
+        "CONTENT": "The system is fine but the <strong>user interface</strong> is not so great ? Do not worry about it, <b>we are here</b> for that particular reason. In this case, our work will be to <strong>define the best route -> response</strong> link and treat the information on the client and generate the view. Here again, it may sound easy but it can get complex, eventually when working with an <strong>historical API</strong> but solutions are legions and sometimes we have to work with you to improve the <strong>client <> back-end relationship</strong>. The API quality test is part of our analysis."
+      },
+      "STORE": {
+        "TITLE": "Deploying to stores",
+        "CONTENT": "There are several steps between the development of an app and its <strong>deployment on stores</strong>. Programmatically, we must adjust the application to the device (access to native APIs). Once the app is set, we must deal with <strong>package signatures</strong> and consolidate the package accordingly to the store (Public, In-House, Ad-hoc, etc.). Private stores, such as AirWatch, commonly called \"MDM\" (<em>Mobile Device Management</em>) requires specific knowledge to manage user rights and remote settings. We will help you with that."
+      }
+    }
+  }
 }
